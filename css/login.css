@@ -1,0 +1,55 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: "open sans";
+    color: wheat;
+    }
+    section{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background:url(loginbg.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .from-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(rgba(3, 3, 3, 0.7),rgba(0,0,0,0.7));
+        width: 425px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        box-shadow: 7px 7px 60px #000;
+    }
+    h1{
+        text-transform: uppercase;
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 0.4em;
+    }
+    .control input,button{
+        width: 100%;
+        display: block;
+        padding: 10px;
+        color: #222;
+        border: none;
+        outline: none;
+        margin: 1em 0;
+    }
+    .control button{
+        background: crimson;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        opacity: .7;
+        transition: opacity .3s ease;
+    }
+    .control button:hover{
+        opacity: 1;
+    }

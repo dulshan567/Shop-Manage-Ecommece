@@ -1,0 +1,222 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); 
+ /* ---- Reset -----*/
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+/* ----  For Whole page -----*/
+html, body {
+ 
+    color: #eceeea;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    width: 100%;
+}
+.space{
+    width: 20px;
+    height: 40px;
+    display: inline;
+    
+}
+/*---------Nav bar -------*/
+nav{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#e71a1a;
+}
+
+/*----------Menu bar ---------*/
+.menu{
+    flex-basis: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    transition: all 0.4s ease-in;
+}
+.menu li{
+    position: relative;
+    }
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 30px;
+    transition: all 0.3s ease-in;
+}
+
+.menu li a:hover{
+background-color: #ffffff;
+color: #000000;
+}
+   /*************Menu part -1************/
+   .Submenu1{
+    position: absolute;
+    list-style: none;
+    font-size: 0.9rem;
+    background: #c95662;
+    width: 140px;
+    left: 0;
+    top: 100%;
+    margin-top: 23px;
+    transition: all 0.3s ease-in;
+    display: none;
+   }
+   .Submenu1 li a {
+    display: block;
+    padding: 15px 20px;
+   }
+   .Submenu1 li a:hover{
+    background: #EDF5E1;
+    color: #17252A;
+    text-decoration: underline;
+   }
+
+   /***** menu part-2 ****/
+   .Submenu2-a{
+    position: absolute;
+    list-style: none;
+    background: #d13c4b;
+    width: 140px;
+    left: 100%;
+    top: 0;
+    transition: all 0.s ease-in;
+    display: none;
+   }
+   /*************display menu parts ***********/
+   .menu > li:hover > .Submenu1,
+   .Submenu1 > li:hover > .Submenu2-a{
+    display: block;
+}
+
+/* ---Hamburger--- */
+nav input[type="checkbox"]{
+    display: none;
+}
+nav > label{
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 2rem;
+    display: none;
+}
+/*    Simple text */
+
+
+ /*------------------- Responsive ----------------------*/
+ @media(max-width: 1230px){
+    /*** menu bar ***/
+    .menu{
+        flex-basis: 60%;
+    }
+    /*-----Simple  Text -----*/
+    .text{
+        font-size: 5rem;
+        padding: 30px;
+    }
+
+ }
+
+ @media(max-width: 1048px){
+    /*** menu bar ***/
+    .menu{
+        flex-basis: 70%;
+    }
+    /*-----Simple  Text -----*/
+    .text{
+        font-size: 4rem;
+        padding: 20px;
+    }
+
+ }
+ @media(max-width: 900px){
+   /*--------nav Bar ----*/
+
+   nav{
+    justify-content: space-between;
+    flex-direction: column;
+   }
+
+
+   /*------logo -----*/
+   .logo{
+    margin: 20px 0;
+   }
+.menu{
+    position: absolute;
+    width: 100vw;
+    padding-top: 40px;
+    flex-direction: column;
+    overflow-x: hidden;
+    top: 108px;
+    left: -100%;
+    background: #d8fd08;
+    transition: all 0.4s ease-in;
+}
+.menu > li{
+    margin-bottom: 40px;
+}
+
+.menu > li > a{
+    padding: 10px 40px;
+}
+
+.menu > li > a:hover{
+    background: rgb(196, 13, 13);
+    color: #0b3aa0;
+}
+
+
+/***** menu parts ****/
+.Submenu1, .Submenu2-a{
+    background: none;
+}
+
+.menu > li:hover > .Submenu1,
+.Submenu1 > li:hover > .Submenu2-a{
+    position: relative;
+    width: 120px;
+    left: 27%;
+}
+
+ /* ---Hamburger Menu Icon --- */
+
+ nav > label:nth-child(3){
+    display: block;
+}
+
+/* Display Menu */
+
+#menu:checked ~ .menu{
+    left: 0;
+}
+
+#menu:checked ~ label:nth-child(4){
+    display: block;
+}
+
+#menu:checked ~ label:nth-child(3){
+    display: none;
+}
+
+/* ---sample text--- */
+
+
+}
+
+
+
+
+
+
+
+

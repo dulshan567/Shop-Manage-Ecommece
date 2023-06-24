@@ -1,0 +1,19 @@
+header{
+    width: 100%;
+}
+.space{
+    width: 20px;
+    height: 40px;
+    display: inline;
+    
+}
+/*---------Nav bar -------*/
+nav{
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#e71a1a;
+}

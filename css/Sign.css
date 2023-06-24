@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','Nerko One',sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+Section .imagebox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+/*
+section .imagebox::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(225deg,#e91e63,#03a9f4);
+    z-index: 1;
+    mix-blend-mode: screen; 
+} */
+section .imagebox img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+section .first-txt{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    font-size: 70px;
+    text-align: center;
+    font-family: "Nerko One";
+}
+section .contentbox {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+height: 100%;
+background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+
+
+}
+
+section .contentbox .formbox{
+    width: 70%;
+}
+section .contentbox .formbox h1{
+    color: #f53677;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    display: inline-block;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+  
+    }
+section .contentbox .formbox .inputbox{
+    margin-bottom: 20px;
+}
+section .contentbox .formbox .inputbox label{
+    font-size: 16px;
+    margin-bottom: 1px;
+    display: inline-block;
+    color: #607db8;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 11px;
+}
+section .contentbox .formbox .inputbox input,button{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607db8;
+    background: transparent;
+    border-radius: 30px;
+}
+section .contentbox .formbox .inputbox button{
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+section .contentbox .formbox .inputbox button[type="submit"]:hover{
+    background: #f53677;
+}
+
+@media (max-width: 768px){
+    section .imagebox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0.5;
+    }
+    section .contentbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+        background-color: transparent; 
+       
+    }
+    section .contentbox .formbox{
+        width: 100%;
+        padding: 40px;
+        background: floralwhite;
+        opacity: 78%;
+        margin: 50px;
+       
+        }
+        section .contentbox .formbox h1{
+            color: rgb(196, 45, 45);
+            
+        }
+        section .contentbox .formbox .inputbox label{
+            color: rgb(232, 20, 20);
+            font-size: 20px;
+        }
+}
