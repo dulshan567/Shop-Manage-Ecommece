@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin_panel</title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome
+   -line-awesome/css/all.min.css">
+     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">-->
+     <link rel="stylesheet" href="main.css">
+     <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/> 
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
+
+</head>
+<body>
+    <br>
+    <div class="aa">
+    <h1 align="center">Welcone To Admin.A</h1>
+    </div>
+<?php
+     if (isset($user)): ?>
+<p> <?php = htmlspecialchars($user["name"]) ?></p>
+    <p><button class="btn1"><a href="logout.php"><b>Log out</b></a></button></p> 
+    
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <h2><span class="lab la accusoft"></span>Admin Panel</h2>
+</div>
+    <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="Admin_panel.php"><span class="las la-igloo"></span>
+                <span>Dashboard</span></a>
+            </li>
+            <li>
+                <a href="Customer_page.php"><span class="las la-shipping-bag"></span>
+                <span>Coustomers</span></a>
+            </li>
+            <li>
+                <a href="Order.php"><span class="las la-igloo"></span>
+                <span>Orders</span></a>
+            </li>
+            <li>
+                <a href="Stock.php"><span class="las la-igloo"></span>
+                <span>Stock </span></a>
+            </li>
+            <li>
+                <a href="Income.php"><span class="las la-igloo"></span>
+                <span>Income</span></a>
+            </li>
+            <li>
+                <a href="" class="Add_Item"><span class="las la-igloo"></span>
+                <span>Add Item+</span></a>
+            </li>
+            <li>
+                <a href="Delete_update.php"><span class="las la-igloo"></span>
+                <span>Update & Delete Item</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2 class="hh2">
+                <label for="">
+                    <span class="las la-bars"></span>
+                </label>
+                Add Item
+            </h2>
+            <div class="search-wrapper" >
+                <span class="las la-search"></span>
+                <input type="search" placeholder="search here..."/>
+            </div>
+            <div class="user-wrapper">
+                <img src="img/img2.jpg" width="30px" height="30px" alt=""  >
+                <div class="awrapper">
+                    <h4>Dulshan sulakshana</h4>
+                    <small> Main Admin</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="cal-md-12">
+                        <div class="card">
+                            <div class="card-header">
+
+                            </div>
+                            <div class="card-body">
+                                <form action="add_item.php" method="POST" enctype="multipart/form-data">
+                                <table>
+                                     <tr>
+                                            <td><label for="Item_name">Item Name</label></td>
+                                            <td><input type="text"  name="Item_name" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Vehical_Type">Vehical Type</label></td>
+                                            <td><input type="text"  name="Vehical_Type" class="form-control">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Descriptions"> Descriptions</label></td>
+                                            <td><input type="text"  name="Descriptions" class="form-control" ></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Price">Price</label></td>
+                                            <td><input type="text"  name="Price" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="Quntitiy">Quntitiy(L / ML)</label></td>
+                                            <td><input type="text"  name="Quntitiy" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="image"> Add Image</label></td>
+                                            <td><input type="file"  name="image" class="form-control"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="">Popular</label></td>
+                                            <td><input type="checkbox"  name="Popular" class="form-control"></td>
+                                        </tr>
+
+                                </table>
+                                <button type="submit" class="btn" name="add_category">Ad Item</button>
+                                </form>
+                                
+
+                                   
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+           </Div>
+
+
+        </main>
+    </div>
+    <!-- JavaScript --> 
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script> 
+<script>
+    alertify.set('notifier','position', 'top-right');
+    alertify.success('Item Add SUCCESSFULLY');
+</script>
+</body>
+</html>
+<?php
+     if (isset($user)): ?>
+<p> <?php = htmlspecialchars($user["name"]) ?></p>
